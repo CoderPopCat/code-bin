@@ -7,7 +7,8 @@ Easy to use and useful code paste bin using mongoose, ejs and node js!
 
 - ```json
    {
-   "mongooseconnectionstring": "YOUR_MONGODB_URI"
+   "mongooseconnectionstring": "YOUR_MONGODB_URI",
+   "staffkey": "something"
    }
    ```
 Go to `config.json` and enter the mongodb uri and a key of your wish for the admins to delete any bins using the del endpoint.
