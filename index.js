@@ -29,7 +29,7 @@ app.get('/', async (req, res) => {
 app.get("/del", async (req, res) => {
 	const key = req.query.auth;
 	const doc = await ShortUrl.findOne({ name: req.query.name })
-	if(key === "aw2plm" && doc) {
+	if(key === config.staffkey && doc) {
 		doc.delete()
 		res.json({success:`Deleted ${doc.name}`})
 	} else {
