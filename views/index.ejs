@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title<%= title %></title>
+<meta property="og:title" content="<%= title %>">
+<meta property="og:image" content="https://cdn.popcat.xyz/popcat.png">
+<meta property="og:description" content="<%= description %>">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="Pop Cat Community">
+<meta property="twitter:image" content="https://cdn.popcat.xyz/popcat.png">
+<meta property="twitter:description" content="<%= description %>">
+<meta name="theme-color" content="#cb3837">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<form method="POST" action="/create">
+  <div class="container">
+	<h1 style="color:white;" class="text-center"><%= title %></h1>
+	<% if(showHeader === true) { %>
+	<header class="head">Views: <%= views %></header>
+	<% } %>
+	<% const styles = `background-color: #1b1930; color: white; font-family: Consolas; font-size: 23px; 	border: none; margin-bottom: 28px;` %>
+
+
+	<label for="tit" style="color: white;">Title</label>
+	<input type="text" value="<%= title ? title : 'Code Bin' %>" class="form-control" style=" background-color: #1b1930; color: white; font-family: Consolas; font-size: 23px; 	border: none; margin-bottom: 28px;" name="title" spellcheck="false" id="tit" autocomplete="off" required>
+	<label for="description" style="color: white;">Description</label>
+	<input type="text" value="<%= description ? description : '' %>"  class="form-control" style="<%= styles %>" name="description" autocomplete="off" spellcheck="false" id="tit" required>
+	<label for="code" style="color: white;">Code</label>
+	<textarea style="height: 97vh; background-color: #1b1930; color: white; font-family: Consolas; font-size: 23px; 	border: none;" id="code" class="form-control" name="code" spellcheck="false" required><%= code %></textarea>
+	<input type="submit" class="btnlmaoxd my-5" value="Create">
+  </div>
+	</form>
+
+
+</body>
+</html>
