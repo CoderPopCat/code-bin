@@ -14,7 +14,7 @@ const createAccountLimiter = rateLimit({
     "You can only create 2 urls in 10 seconds!"
 });
 
-mongoose.connect(config.mongooseconnectionstring, {
+mongoose.connect(config.MONGO_URI, {
   useNewUrlParser: true, useUnifiedTopology: true
 });
 
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', async (req, res) => {
   const shortUrls = await ShortUrl.find()
 
-  res.render('index', { shortUrls: shortUrls, code: "", showHeader: null, title: "Code Bin", description: "Store and Access your codes on the cloud" })
+  res.render('index', { shortUrls: shortUrls, code: "", showHeader: null, title: "Code Bin", description: "Store and Access your Codes from the Cloud." })
 });
 app.get("/del", async (req, res) => {
 	const key = req.query.auth;
