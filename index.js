@@ -7,7 +7,6 @@ const rateLimit = require("express-rate-limit")
 const config = require("./config.json")
 var Filter = require('bad-words'),
     filter = new Filter();
-filter.addWords('hentai',"cum");
 const createAccountLimiter = rateLimit({
   windowMs: 10000,
   max: 2, 
