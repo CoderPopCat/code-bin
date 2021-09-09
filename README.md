@@ -8,7 +8,8 @@ Easy to use and useful code paste bin using mongoose, ejs and node js!
 - ```json
    {
    "mongooseconnectionstring": "YOUR_MONGODB_URI"
-   }```
+   }
+   ```
 Go to `config.json` and enter the mongodb uri
 
 Done!
